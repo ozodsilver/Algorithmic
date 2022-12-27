@@ -97,7 +97,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+/* 
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
@@ -106,7 +106,7 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
+} */
 
 
 </style>

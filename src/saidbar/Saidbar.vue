@@ -12,7 +12,7 @@
           py-4
           d-flex
           align-items-center
-          gap-5
+          gap-4
         "
         id="but"
         ><i class="fas fa-home fa-2x"></i>Home  
@@ -21,7 +21,7 @@
       >
 
       <router-link
-        to="/Problems"
+        to="/Users"
         type="button"
         class="
           btn 
@@ -32,7 +32,7 @@
           py-4
           d-flex
           align-items-center
-          gap-5
+          gap-4
         "
         ><i class="fas fa-users fa-2x"></i>Foydalanuvchilar</router-link
       >
@@ -50,9 +50,9 @@
           py-4
           d-flex
           align-items-center
-          gap-5
+          gap-4
         "
-        ><i class="fas fa-users fa-2x"></i>Foydalanuvchilar</router-link
+        ><i class="fab fa-asymmetrik fa-2x"></i>Problems</router-link
       >
 
 
@@ -67,8 +67,11 @@
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
-  background: #e2e8f0;
+  background: rgb(226,232,240);
+background: linear-gradient(63deg, rgba(226,232,240,1) 0%, rgba(22,95,99,0.09007352941176472) 94%);
   margin-top: 70px;
+  position: relative;
+  z-index:1111 ;
 
 }
 #but {
@@ -98,6 +101,8 @@ color: #164E63;
 text-transform: capitalize;
 font-size: 13px;
 }
+
+
 
 #saidbar a.router-link-exact-active {
   color: #1ebc7f !important;

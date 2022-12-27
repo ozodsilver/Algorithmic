@@ -47,10 +47,7 @@
 
             <!-- Right elements -->
             <div class="d-flex align-items-center gap-3">
-              <!-- Icon -->
-              <n-input round placeholder="Search" />
-
-              <!-- Notifications -->
+        
               <div class="dropdown">
                 <a
                   class="text-reset me-3 dropdown-toggle hidden-arrow"
