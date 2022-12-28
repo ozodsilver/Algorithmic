@@ -67,8 +67,8 @@
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
-  background: rgb(226,232,240);
-background: linear-gradient(63deg, rgba(226,232,240,1) 0%, rgba(22,95,99,0.09007352941176472) 94%);
+ background: rgb(255,255,255);
+
   margin-top: 70px;
   position: relative;
   z-index:1111 ;
@@ -100,6 +100,7 @@ background-position: top right;
 color: #164E63;
 text-transform: capitalize;
 font-size: 13px;
+font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -111,5 +112,5 @@ font-size: 13px;
   background-position: 102%;
   background-size: contain;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 </style>

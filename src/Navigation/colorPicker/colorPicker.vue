@@ -1,15 +1,7 @@
 <template >
   <div id="colorPicker">
     <div class="picker">
-      <h6 class="m-0">Color scheme</h6>
-      <button id="but" class="btn w-0 m-0 p-0" @click="theme1"></button>
-
-      <n-button quaternary circle type="error"  id="but2"  @click="theme2"  class="btn w-0 m-0 p-0 text-white">
-      
-      <template #icon>
-      
-      </template>
-    </n-button>
+    
   
   <n-switch v-model:value="active" @update:value="handleChange">
     <template #checked>
@@ -59,53 +51,26 @@ let handleChange = (value)=>{
   }
   })
 
-
-
-let theme1 = () => {
-  store.color = true;
-  store.color2 = false;
-};
-
-let theme2 = () => {
-  store.color = false;
-  store.color2 = true;
-};
-
 </script>
 
 
 <style lang="scss" scoped>
 #colorPicker {
   .picker {
-    width: 25%;
-    height: 40px;
+  
+   
+    transform: rotate(90deg);
     border-radius: 20px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgb(207, 217, 219);
+    z-index: 11111;
+    bottom: 250px;
+    right: -43px;
+    background: rgb(232, 237, 238);
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
-  #but {
-    width: 25px !important;
-    height: 25px !important;
-    border-radius: 50% !important;
-    background: rgb(194, 93, 237);
-    background: linear-gradient(
-      276deg,
-      rgba(194, 93, 237, 1) 0%,
-      rgba(123, 135, 252, 1) 100%
-    );
-  }
 
-  #but2{
-    width: 25px !important;
-    height: 25px !important;
-    border-radius: 50% !important;
-    background: rgba(30, 77, 104, 0.742) !important;
-  }
 }
 </style>

@@ -80,7 +80,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+ display: none;
 }
 
 /* Track */
@@ -97,16 +97,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-} */
 
 
 </style>
