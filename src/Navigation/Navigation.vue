@@ -47,7 +47,7 @@
 
             <!-- Right elements -->
             <div class="d-flex align-items-center gap-3">
-        
+              <router-link to="/Login" class="text-white">Login</router-link>
               <div class="dropdown">
                 <a
                   class="text-reset me-3 dropdown-toggle hidden-arrow"
@@ -65,6 +65,8 @@
               </div>
               <!-- Avatar -->
               <div class="dropdown">
+
+
                 <a
                   class="dropdown-toggle d-flex align-items-center hidden-arrow"
                   href="#"
@@ -101,7 +103,7 @@ let isActive = ref();
 
 let store = useStore();
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 #Navigation {
   .header {
     width: 98%;

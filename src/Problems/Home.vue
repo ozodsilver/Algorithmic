@@ -5,7 +5,7 @@
         <n-card
           content-style="padding: 0; background: rgb(226,232,240);
 background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px"
-          hoverable="true"
+          hoverable=true
           data-mdb-ripple-color="secondary"
           class="ripple h-100"
           bordered="true"
@@ -44,7 +44,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
     <div class="row mt-4">
       <div class="col-4">
         <n-card
-          hoverable="true"
+          hoverable=true
           data-mdb-ripple-color="primary"
           id="heading2"
           class="ripple bg-gradient h-100"
@@ -60,6 +60,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
             }"
             class="text-center d-block fw-bold p-3"
             v-motion-roll-visible-top
+            id="reja"
           >
             Rejalashtirilgan Musobaqalar
           </n-gradient-text>
@@ -73,7 +74,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
           >
           </lord-icon> -->
 
-          <img src="../assets/contest.png" alt="" class="w-50 d-block m-auto" />
+          <img src="../assets/contest.png" alt="" class="w-50 d-block m-auto" id="box" />
 
           <n-gradient-text
             :size="20"
@@ -91,7 +92,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
 
       <div class="col-4">
         <n-card
-          hoverable="true"
+          hoverable=true
           id="heading3"
           data-mdb-ripple-color="primary"
           class="ripple"
@@ -144,12 +145,13 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
             <img
               src="../assets/men.jpg"
               alt=""
-              class="rounded-circle img-thumbnail"
-              style="width: 50px"
+              class="rounded-circle p-2"
+              style="width: 50px; border: 1px double"
+              id="person1"
             />
 
             <i class="fas fa-caret-right fs-4 text-dark"></i>
-            <img src="../assets/icons/1.png" alt="" style="width: 30px" />
+            <img src="../assets/icons/1.png" alt="" style="width: 30px" id="medal1" />
           </div>
           <!-- person1 -->
 
@@ -185,12 +187,13 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
             <img
               src="../assets/shaxzod.jpg"
               alt=""
-              class="rounded-circle img-thumbnail"
-              style="width: 50px"
+              class="rounded-circle p-2"
+              style="width: 50px; border: 1px double"
+              id="person2"
             />
 
             <i class="fas fa-caret-right fs-4 text-dark"></i>
-            <img src="../assets/icons/2.png" alt="" style="width: 30px" />
+            <img src="../assets/icons/2.png" alt="" style="width: 30px" id="medal2" />
           </div>
           <!-- person2 -->
 
@@ -228,12 +231,14 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
             <img
               src="../assets/sardor.jpg"
               alt=""
-              class="rounded-circle img-thumbnail"
-              style="width: 50px"
+              class="rounded-circle p-2"
+              style="width: 50px; border: 1px double"
+              id="person3"
+            
             />
 
             <i class="fas fa-caret-right fs-4 text-dark"></i>
-            <img src="../assets/icons/3.png" alt="" style="width: 30px" />
+            <img src="../assets/icons/3.png" alt="" style="width: 30px" id="medal3" />
           </div>
           <!-- person3 -->
         </n-card>
@@ -241,76 +246,71 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
 
       <div class="col-4">
         <n-card
-          hoverable="true"
+          hoverable=true
           id="heading4"
           data-mdb-ripple-color="primary"
           class="ripple h-100"
           content-style="padding: 0;background: rgb(226,232,240);
 background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px; height:100%"
         >
-         <div class="d-flex  w-50 m-auto ">
-          <n-gradient-text
-            :size="24"
-            :gradient="{
-              deg: 180,
-              from: 'rgb(88, 85, 85)',
-              to: 'rgb(170, 170, 170)',
-            }"
-            class="text-center fw-bold d-block p-3 "
-            v-motion-roll-visible-top
-          >
-            Statistika  
-          </n-gradient-text>
+          <div class="d-flex w-50 m-auto">
+            <n-gradient-text
+              :size="24"
+              :gradient="{
+                deg: 180,
+                from: 'rgb(88, 85, 85)',
+                to: 'rgb(170, 170, 170)',
+              }"
+              class="text-center fw-bold d-block p-3"
+              v-motion-roll-visible-top
+            >
+              Statistika
+            </n-gradient-text>
 
-          <lord-icon
-            src="https://cdn.lordicon.com/tbfrtmlu.json"
-            trigger="loop"
-            style="width: 50px; height: 50px"
-            class="m-auto  border-danger d-block"
-            id="box"
-          >
-          </lord-icon>
-         
-         </div>
+            <lord-icon
+              src="https://cdn.lordicon.com/tbfrtmlu.json"
+              trigger="loop"
+              style="width: 50px; height: 50px"
+              class="m-auto border-danger d-block"
+              id="box"
+            >
+            </lord-icon>
+          </div>
 
+          <div class="row">
+            <div class="col-12 gap-3 justify-content-end px-5 mt-5 d-flex">
+              <span class="text-secondary">Foydalanuvchilar soni</span>
+              <p
+                class="text-success text-center bg-secondary badge bg-gradient text-white"
+              >
+                3123
+              </p>
+            </div>
 
+            <div class="col-12 gap-3 justify-content-end px-5 d-flex">
+              <span class="text-secondary">Urinishlar soni</span>
+              <p class="text-center badge bg-secondary bg-gradient text-white">312123</p>
+            </div>
 
-<div class="row">
- 
+            <div
+              class="col-12 gap-3 justify-content-end flex-row-reverse px-5 d-flex"
+              style="margin-top: 100px"
+            >
+              <span class="text-secondary">Masalalar soni</span>
+              <p
+                class="text-success text-center badge bg-secondary bg-gradient text-white"
+              >
+                1234
+              </p>
+            </div>
 
-  <div class="col-12 gap-3 justify-content-end px-5 mt-5 d-flex">
-  
-  <span class="text-secondary">Foydalanuvchilar soni</span>
-  <p class="text-success text-center  bg-secondary badge bg-gradient text-white">3123</p>
-
-  </div>
-
-  <div class="col-12 gap-3 justify-content-end px-5 d-flex">
-  
-  <span class="text-secondary">Urinishlar soni</span>
-  <p class=" text-center badge bg-secondary bg-gradient text-white">312123</p>
-
-  </div>
-
-  
-  <div class="col-12 gap-3 justify-content-end flex-row-reverse  px-5 d-flex" style="margin-top: 100px;">
-  
-  <span class="text-secondary">Masalalar soni</span>
-  <p class="text-success text-center badge  bg-secondary bg-gradient text-white">1234</p>
-
-  </div>
-
-  <div class="col-12 gap-3 justify-content-end  flex-row-reverse px-5 d-flex">
-  
-  <span class="text-secondary">O'tkazilgan olimpiadalar</span>
-  <p class="text-success text-center badge bg-success bg-gradient text-white">1234</p>
-
-  </div>
-</div>
-
-
-
-         
+            <div class="col-12 gap-3 justify-content-end flex-row-reverse px-5 d-flex">
+              <span class="text-secondary">O'tkazilgan olimpiadalar</span>
+              <p class="text-success text-center badge bg-success bg-gradient text-white">
+                1234
+              </p>
+            </div>
+          </div>
         </n-card>
       </div>
     </div>
@@ -322,6 +322,7 @@ import { ref, onMounted } from "vue";
 import { animate, spring } from "motion";
 import gsap from "gsap";
 
+
 export default {
   setup() {
     let loading = ref(true);
@@ -331,27 +332,40 @@ export default {
     }, 2000);
 
     onMounted(() => {
-      animate("#box", { rotate: 360 }, { easing: spring() }, spring({ stiffness: 500 }), {
-        opacity: [
-          null, // 0.5
-          0.8,
-          1,
-        ],
-      });
+      animate(
+        "#box",
+        { rotate: 360 },
+        { easing: spring() },
+        spring({ stiffness: 900 }),
+        {}
+      );
 
       gsap.from("#heading", { opacity: 0, y: 500, duration: 0.6 });
       gsap.from("#heading2", { opacity: 0, y: 280, duration: 0.5 });
       gsap.from("#heading3", { opacity: 0, y: 380, duration: 0.8 });
       gsap.from("#heading4", { opacity: 0, y: 480, duration: 1.1 });
 
-      // gsap.from("#heading4", { opacity: 0, y: 480, duration: 1.1 });
-    });
+      gsap.from("#reja", { opacity: 0, duration: 0.2, scale: 0 });
+      gsap.to("#reja", { opacity: 1, duration: 0.4, scale: 1 });
+
+      // person1
+      gsap.from("#person1", { delay: 1, duration: 0.1, scale: 0 });
+      gsap.to("#person1", { delay: 1, duration: 0.1, scale: 1 });
+      // person2
+      gsap.from("#person2", { delay: 1.1, duration: 0.1, scale: 0 });
+      gsap.to("#person2", { delay: 1.1, duration: 0.1, scale: 1 });
+      // person3
+
+      gsap.from("#person3", { delay: 1.2, duration: 0.1, scale: 0 });
+      gsap.to("#person3", { delay: 1.2, duration: 0.1, scale: 1 });
+  
+      });
 
     return { loading };
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .n-gradient-text {
   font-family: "Quicksand", sans-serif;
   white-space: normal;
@@ -365,33 +379,31 @@ export default {
   overflow: hidden;
 }
 
-#heading2{
-  min-height:430px;
+#heading2 {
+  min-height: 430px;
 }
-#heading4{
-  min-height:430px;
-  &:before{
-    content: '';
+#heading4 {
+  min-height: 430px;
+  &:before {
+    content: "";
     position: absolute;
     width: 40%;
     height: 35%;
     top: 15%;
     left: 3%;
-    background-image: url('../assets/forBg/bg1.png');
+    background-image: url("../assets/forBg/bg1.png");
     background-size: cover;
-
   }
 
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     position: absolute;
     width: 180px;
     height: 180px;
     bottom: 0;
     right: -5%;
-    background-image: url('../assets/forBg/bg2.png');
+    background-image: url("../assets/forBg/bg2.png");
     background-size: cover;
-
   }
 }
 

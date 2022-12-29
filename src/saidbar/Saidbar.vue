@@ -56,6 +56,24 @@
       >
 
 
+      <router-link
+        to="/Courses"
+        type="button"
+        class="
+          btn 
+          shadow-0
+          
+          rounded-5
+          w-100
+          py-4
+          d-flex
+          align-items-center
+          gap-4
+        "
+        ><i class="fas fa-photo-video fa-2x"></i>Kurslar</router-link
+      >
+
+
     </div>
   </div>
 </template>
@@ -67,7 +85,7 @@
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
- background: rgb(255,255,255);
+  background: #DFE8F4;
 
   margin-top: 70px;
   position: relative;

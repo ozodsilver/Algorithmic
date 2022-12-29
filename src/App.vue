@@ -8,6 +8,7 @@ let errMsg = ref(null);
 </script>
 
 <template>
+  
   <n-message-provider>
     <n-notification-provider>
       <n-dialog-provider>
@@ -24,10 +25,8 @@ let errMsg = ref(null);
     <div class="col-10 offset-2">
       <div class="mt-5 pt-5 px-4">
       
-        <router-view v-slot="{ Component }">
-  <transition name="fade">
-    <component :is="Component" />
-  </transition>
+        <router-view >
+  
 </router-view>
      
         <!--     
