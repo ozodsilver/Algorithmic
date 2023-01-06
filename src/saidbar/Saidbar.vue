@@ -15,7 +15,7 @@
           gap-4
         "
         id="but"
-        ><i class="fas fa-home fa-2x"></i>Home  
+        ><i class="fas fa-home fs-5"></i>Home  
         
             </router-link
       >
@@ -34,7 +34,7 @@
           align-items-center
           gap-4
         "
-        ><i class="fas fa-users fa-2x"></i>Foydalanuvchilar</router-link
+        ><i class="fas fa-users fs-5"></i>Foydalanuvchilar</router-link
       >
 
 
@@ -52,12 +52,12 @@
           align-items-center
           gap-4
         "
-        ><i class="fab fa-asymmetrik fa-2x"></i>Problems</router-link
+        ><i class="fab fa-asymmetrik fs-5"></i>Problems</router-link
       >
 
 
       <router-link
-        to="/Courses"
+        :to="{name:'Courses'}"
         type="button"
         class="
           btn 
@@ -70,7 +70,7 @@
           align-items-center
           gap-4
         "
-        ><i class="fas fa-photo-video fa-2x"></i>Kurslar</router-link
+        ><i class="fas fa-photo-video fs-5"></i>Kurslar</router-link
       >
 
 

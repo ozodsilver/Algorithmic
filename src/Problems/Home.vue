@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row mt-3">
+    <div class="row">
       <div class="col-12" id="heading" style="font-family: 'Quicksand', sans-serif">
         <n-card
           content-style="padding: 0; background: rgb(226,232,240);
@@ -21,7 +21,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
                   />
                 </div>
 
-                <div class="p-5 fw-bolder opacity-70 w-75">
+                <div class="p-5 pt-0 fw-bolder opacity-70 w-100">
                   <n-gradient-text :size="24" type="success" class="fw-bold">
                     Algorithmic.uz
                   </n-gradient-text>
@@ -42,7 +42,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
     </div>
 
     <div class="row mt-4">
-      <div class="col-4">
+      <div class="col-12 col-lg-6">
         <n-card
           hoverable=true
           data-mdb-ripple-color="primary"
@@ -90,7 +90,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
         </n-card>
       </div>
 
-      <div class="col-4">
+      <div class="col-12 col-lg-6">
         <n-card
           hoverable=true
           id="heading3"
@@ -244,7 +244,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
         </n-card>
       </div>
 
-      <div class="col-4">
+      <div class="col-12 col-lg-6 mt-md-4">
         <n-card
           hoverable=true
           id="heading4"
@@ -398,10 +398,10 @@ export default {
   &:after {
     content: "";
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     bottom: 0;
-    right: -5%;
+    right: 0;
     background-image: url("../assets/forBg/bg2.png");
     background-size: cover;
   }

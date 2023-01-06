@@ -24,11 +24,8 @@ let errMsg = ref(null);
 
     <div class="col-10 offset-2">
       <div class="mt-5 pt-5 px-4">
-      
-        <router-view >
-  
-</router-view>
-     
+        <router-view> </router-view>
+
         <!--     
         <RouterView v-slot="{ Component }">
           <template v-if="Component">
@@ -54,18 +51,16 @@ let errMsg = ref(null);
   </div>
 </template>
 
-<style >
+<style>
 html {
   height: 100%;
 }
 * {
   box-sizing: border-box;
-
 }
 body {
   height: 100%;
   background: #f1f5f9;
- 
 }
 
 .dark {
@@ -79,7 +74,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
- display: none;
+  display: none;
 }
 
 /* Track */
@@ -96,7 +91,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-
 </style>
-
