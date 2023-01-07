@@ -68,15 +68,7 @@
           >
             Rejalashtirilgan Musobaqalar
           </n-gradient-text>
-          <!-- <lord-icon
-            src="https://cdn.lordicon.com/jpqbjwbh.json"
-            trigger="hover"
-            colors="primary:#66ee78,secondary:#7166ee"
-            style="width: 70px; height: 70px"
-            class="m-auto d-block"
-            id="box"
-          >
-          </lord-icon> -->
+         
 
           <img src="../assets/contest.png" alt="" class="w-50 d-block m-auto" id="box" />
 
