@@ -5,7 +5,10 @@
         <template #checked> Dark mode </template>
         <template #unchecked> Light mode </template>
       </n-switch>
-      <a href="https://t.me/dasturchilarklubi" class="fab fa-telegram-plane fs-5"></a>
+      <a
+        href="https://t.me/dasturchilarklubi"
+        class="fab fa-telegram-plane fs-5"
+      ></a>
       <a
         href=" https://instagram.com/dasturchilarklubi"
         class="fab fa-instagram text-danger fs-5"
@@ -30,27 +33,24 @@ let handleChange = (value) => {
   // document.body.classList.toggle(`${localStorage.getItem('color')}`)
   if (localStorage.getItem("color") == "true") {
     document.body.classList.add(`dark`);
-    store.color = true
-    store.showColor = true 
-
+    store.color = true;
+    store.showColor = true;
   } else if (localStorage.getItem("color") == "false") {
     document.body.classList.remove(`dark`);
-    store.color = false
-    store.showColor = false 
-  
+    store.color = false;
+    store.showColor = false;
   }
 };
 
 onMounted(() => {
   if (localStorage.getItem("color") == "true") {
     document.body.classList.add(`dark`);
-    store.color = true
-    store.showColor = true 
-  
+    store.color = true;
+    store.showColor = true;
   } else if (localStorage.getItem("color") == "false") {
     document.body.classList.remove(`dark`);
-    store.color = false
-    store.showColor = false 
+    store.color = false;
+    store.showColor = false;
   }
 });
 </script>
