@@ -1,18 +1,20 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12" id="heading" style="font-family: 'Quicksand', sans-serif">
+      <div class="col-12" id="heading">
         <n-card
-          content-style="padding: 0; background: rgb(226,232,240);
-background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px"
+          content-style="padding: 0; color:#fff; border-radius:5px;"
           hoverable=true
+         header-style = "color:#fff"
           data-mdb-ripple-color="secondary"
-          class="ripple h-100"
-          bordered="true"
+          class="ripple h-100  dark border-0  "
+          :class="{'darkMode':store.color}"
+         
+         
         >
-          <n-tabs type="line" size="large" :tabs-padding="20" pane-style="padding: 20px;">
-            <n-tab-pane name="Bu qanday platforma?" content-style="color:white">
-              <div class="d-flex justify-content-around">
+          <n-tabs type="line" size="large"  :tabs-padding="20"   >
+            <n-tab-pane name="Bu qanday platforma?  "   >
+              <div class="d-flex justify-content-around ">
                 <div class="p-3">
                   <img
                     src="../assets/logo-v-2.png"
@@ -21,9 +23,9 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
                   />
                 </div>
 
-                <div class="p-5 pt-0 fw-bolder opacity-70 w-100">
+                <div class="p-5 pt-0 fw-bolder opacity-70 w-100 " :class="{'textColor':store.showColor}">
                   <n-gradient-text :size="24" type="success" class="fw-bold">
-                    Algorithmic.uz
+                    Algorithmic.uz {{ store.showColor }}
                   </n-gradient-text>
                   - bu sizning dasturlash mahoratingizni oshirish, bilimingizni
                   kengaytirish va texnik suhbatlarga tayyorgarlik ko'rish uchun yordam
@@ -33,7 +35,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
                 </div>
               </div>
             </n-tab-pane>
-            <n-tab-pane name=" Tizimda ishlash bo'yicha yo'riqnoma">
+            <n-tab-pane name=" Tizimda ishlash bo'yicha yo'riqnoma"  content-style = 'color:#fff'>
               Tizimda ishlash bo'yicha yo'riqnoma
             </n-tab-pane>
           </n-tabs>
@@ -42,14 +44,16 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
     </div>
 
     <div class="row mt-4">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 ">
         <n-card
-          hoverable=true
+          hoverable="true"
+          :bordered = "false"
+         
           data-mdb-ripple-color="primary"
           id="heading2"
-          class="ripple bg-gradient h-100"
-          content-style="padding: 0;background: rgb(226,232,240);
-background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px; height:100%"
+          class="ripple  h-100 dark "
+          :class="{'darkMode':store.color}"
+          content-style="padding: 0; color:white; border-radius:5px; height:100%"
         >
           <n-gradient-text
             :size="20"
@@ -90,14 +94,15 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
         </n-card>
       </div>
 
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 ">
         <n-card
           hoverable=true
           id="heading3"
+        :bordered = 'false'
           data-mdb-ripple-color="primary"
-          class="ripple"
-          content-style="padding: 0;background: rgb(226,232,240); padding-bottom:40px;
-background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px"
+          class="ripple dark "
+          :class="{'darkMode':store.color}"
+          content-style="padding: 0; color:white; border-radius:5px"
         >
           <n-gradient-text
             :size="24"
@@ -248,10 +253,11 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
         <n-card
           hoverable=true
           id="heading4"
+          :bordered = 'false'
           data-mdb-ripple-color="primary"
-          class="ripple h-100"
-          content-style="padding: 0;background: rgb(226,232,240);
-background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%); color:white; border-radius:5px; height:100%"
+          class="ripple h-100 dark"
+          :class="{'darkMode':store.color}"
+          content-style="padding: 0; color:white; border-radius:5px; height:100%"
         >
           <div class="d-flex w-50 m-auto">
             <n-gradient-text
@@ -308,6 +314,7 @@ background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 
               <span class="text-secondary">O'tkazilgan olimpiadalar</span>
               <p class="text-success text-center badge bg-success bg-gradient text-white">
                 1234
+             
               </p>
             </div>
           </div>
@@ -321,11 +328,13 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 import { animate, spring } from "motion";
 import gsap from "gsap";
-
+import {useStore} from '../../store/store.js'
 
 export default {
   setup() {
     let loading = ref(true);
+let store = useStore()
+
 
     setTimeout(() => {
       loading.value = false;
@@ -361,7 +370,7 @@ export default {
   
       });
 
-    return { loading };
+    return { loading, store};
   },
 };
 </script>
@@ -371,12 +380,35 @@ export default {
   white-space: normal;
 }
 
+
+.dark{
+  background: rgb(226,232,240);
+background: linear-gradient(270deg, rgba(226,232,240,1) 0%, rgba(219,231,247,1) 100%);
+}
+
+.darkMode{
+
+  background: #1A2B3E !important;
+  
+}
+
+.textColor{
+  color: #fff !important;
+}
+
+
 .breakWord {
   max-width: 15rem;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+#heading{
+  font-family:Quicksand,sans-serif;
+}
+#heading3{
+  min-height: 430px;
 }
 
 #heading2 {

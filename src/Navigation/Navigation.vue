@@ -109,12 +109,6 @@ let store = useStore();
     width: 98%;
     margin: auto;
     height: auto;
-    background: rgb(194, 93, 237);
-    background: linear-gradient(
-      276deg,
-      rgba(194, 93, 237, 1) 0%,
-      rgba(123, 135, 252, 1) 100%
-    );
     background: #164e63 !important;
     border-radius: 10px;
     position: fixed;
@@ -124,16 +118,7 @@ let store = useStore();
     border-radius: 10px;
   }
 
-  .backFon {
-    // background: #AFC2CB !important;
-    background: rgb(194, 93, 237);
-    background: linear-gradient(
-      276deg,
-      rgba(194, 93, 237, 0.8) 0%,
-      rgba(30, 77, 104, 0.942) 100%
-    );
-    background: #AFC2CB !important;
-  }
+
 
   .backNav {
     width: 95%;
@@ -154,21 +139,6 @@ let store = useStore();
     z-index: 211;
   }
 
-  .active {
-    background: rgb(194, 93, 237);
-    background: linear-gradient(
-      276deg,
-      rgba(194, 93, 237, 1) 0%,
-      rgba(123, 135, 252, 1) 100%
-    );
-    border-radius: 10px;
-  }
 
-  .active2 {
-    background: #164e63 !important;
-    box-shadow: 0 5px 3px rgba(192, 197, 204, 0.099) !important;
-
-    border-radius: 10px;
-  }
 }
 </style>

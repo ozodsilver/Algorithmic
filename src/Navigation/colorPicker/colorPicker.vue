@@ -4,9 +4,12 @@
       <n-switch v-model:value="active" @update:value="handleChange">
         <template #checked> Dark mode </template>
         <template #unchecked> Light mode </template>
-      </n-switch> 
-      <a href="https://t.me/dasturchilarklubi" class="fab fa-telegram-plane fs-5 "></a>
-      <a href=" https://instagram.com/dasturchilarklubi" class="fab fa-instagram text-danger fs-5"></a>
+      </n-switch>
+      <a href="https://t.me/dasturchilarklubi" class="fab fa-telegram-plane fs-5"></a>
+      <a
+        href=" https://instagram.com/dasturchilarklubi"
+        class="fab fa-instagram text-danger fs-5"
+      ></a>
       <a href="" class="fab fa-facebook fs-5"></a>
     </div>
   </div>
@@ -27,20 +30,27 @@ let handleChange = (value) => {
   // document.body.classList.toggle(`${localStorage.getItem('color')}`)
   if (localStorage.getItem("color") == "true") {
     document.body.classList.add(`dark`);
-    console.log("ss");
+    store.color = true
+    store.showColor = true 
+
   } else if (localStorage.getItem("color") == "false") {
     document.body.classList.remove(`dark`);
-    console.log("kk");
+    store.color = false
+    store.showColor = false 
+  
   }
 };
 
 onMounted(() => {
   if (localStorage.getItem("color") == "true") {
     document.body.classList.add(`dark`);
-    console.log("ss");
+    store.color = true
+    store.showColor = true 
+  
   } else if (localStorage.getItem("color") == "false") {
     document.body.classList.remove(`dark`);
-    console.log("kk");
+    store.color = false
+    store.showColor = false 
   }
 });
 </script>
@@ -54,14 +64,14 @@ onMounted(() => {
     z-index: 11111;
     bottom: 250px;
     right: -85px;
-    background:transparent;
+    background: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  gap: 10px;
-  a{
-    transform: rotate(270deg);
-  }
+    gap: 10px;
+    a {
+      transform: rotate(270deg);
+    }
   }
 }
 </style>

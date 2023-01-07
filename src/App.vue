@@ -8,7 +8,6 @@ let errMsg = ref(null);
 </script>
 
 <template>
-  
   <n-message-provider>
     <n-notification-provider>
       <n-dialog-provider>
@@ -63,8 +62,18 @@ body {
   background: #f1f5f9;
 }
 
+.darkModee {
+  background: #1a2b3e !important;
+  box-shadow: 0 0 2px rgb(255, 255, 255);
+
+}
+
+.textColor{
+  color: #fff !important;
+}
+
 .dark {
-  background: #2e2f32;
+  background: #1a2b3e;
 }
 
 .n-message-container {

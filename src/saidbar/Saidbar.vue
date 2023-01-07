@@ -1,83 +1,44 @@
-<template >
-  <div id="saidbar">
+<template>
+  <div id="saidbar" class="side" :class="{ darkModee: store.color }">
     <div class="position-relative pt-3">
       <router-link
         to="/"
         type="button"
-        class="
-          btn 
-          shadow-0
-          rounded-5
-          w-100
-          py-4
-          d-flex
-          align-items-center
-          gap-4
-        "
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        :class="{textColor:store.showColor}"
         id="but"
-        ><i class="fas fa-home fs-5"></i>Home  
-        
-            </router-link
-      >
+        ><i class="fas fa-home fs-5"  :class="{textColor:store.showColor}"></i>Home
+      </router-link>
 
       <router-link
         to="/Users"
         type="button"
-        class="
-          btn 
-          shadow-0
-          
-          rounded-5
-          w-100
-          py-4
-          d-flex
-          align-items-center
-          gap-4
-        "
-        ><i class="fas fa-users fs-5"></i>Foydalanuvchilar</router-link
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        :class="{textColor:store.showColor}"
+        ><i class="fas fa-users fs-5"  :class="{textColor:store.showColor}"></i>Foydalanuvchilar</router-link
       >
-
 
       <router-link
         to="/Problems"
         type="button"
-        class="
-          btn 
-          shadow-0
-          
-          rounded-5
-          w-100
-          py-4
-          d-flex
-          align-items-center
-          gap-4
-        "
-        ><i class="fab fa-asymmetrik fs-5"></i>Problems</router-link
+        :class="{textColor:store.showColor}"
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        ><i class="fab fa-asymmetrik fs-5"  :class="{textColor:store.showColor}"></i>Problems</router-link
       >
-
 
       <router-link
-        :to="{name:'Courses'}"
+        :to="{ name: 'Courses' }"
         type="button"
-        class="
-          btn 
-          shadow-0
-          
-          rounded-5
-          w-100
-          py-4
-          d-flex
-          align-items-center
-          gap-4
-        "
-        ><i class="fas fa-photo-video fs-5"></i>Kurslar</router-link
+        :class="{textColor:store.showColor}"
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        ><i class="fas fa-photo-video fs-5"  :class="{textColor:store.showColor}"></i>Kurslar</router-link
       >
-
-
     </div>
   </div>
 </template>
 <script setup>
+import { useStore } from "../../store/store";
+let store = useStore();
 </script>
 <style lang="scss" scoped>
 #saidbar {
@@ -85,16 +46,18 @@
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
-  background: #DFE8F4;
+ 
 
   margin-top: 70px;
   position: relative;
-  z-index:1111 ;
+  z-index: 1111;
+}
 
+.side{
+  background: #dfe8f4;
 }
 #but {
   position: relative;
- 
 }
 
 #but:before {
@@ -103,25 +66,23 @@
   height: 150%;
   right: -9%;
   position: absolute;
-  
+
   background-repeat: no-repeat;
   background-position: 60%;
   background-size: contain;
 }
 
-i{
-  color: #164E63;
+i {
+  color: #164e63;
 }
 
-#saidbar a{
-background-position: top right;
-color: #164E63;
-text-transform: capitalize;
-font-size: 13px;
-font-family: 'Ubuntu', sans-serif;
+#saidbar a {
+  background-position: top right;
+  color: #164e63;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
 }
-
-
 
 #saidbar a.router-link-exact-active {
   color: #1ebc7f !important;
@@ -130,5 +91,5 @@ font-family: 'Ubuntu', sans-serif;
   background-position: 102%;
   background-size: contain;
 }
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 </style>
