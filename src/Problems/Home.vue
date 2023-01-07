@@ -4,7 +4,7 @@
       <div class="col-12" id="heading">
         <n-card
           content-style="padding: 0; color:#fff; border-radius:5px;"
-          hoverable=true
+          :hoverable="true"
          header-style = "color:#fff"
           data-mdb-ripple-color="secondary"
           class="ripple h-100  dark border-0  "
@@ -46,7 +46,7 @@
     <div class="row mt-4">
       <div class="col-12 col-lg-6 ">
         <n-card
-          hoverable="true"
+          :hoverable="true"
           :bordered = "false"
          
           data-mdb-ripple-color="primary"
@@ -96,7 +96,7 @@
 
       <div class="col-12 col-lg-6 ">
         <n-card
-          hoverable=true
+          :hoverable="true"
           id="heading3"
         :bordered = 'false'
           data-mdb-ripple-color="primary"
@@ -251,7 +251,7 @@
 
       <div class="col-12 col-lg-6 mt-md-4">
         <n-card
-          hoverable=true
+          :hoverable="true"
           id="heading4"
           :bordered = 'false'
           data-mdb-ripple-color="primary"

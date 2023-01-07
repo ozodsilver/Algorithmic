@@ -23,28 +23,20 @@ let errMsg = ref(null);
 
     <div class="col-10 offset-2">
       <div class="mt-5 pt-5 px-4">
-        <router-view> </router-view>
+        <!-- <router-view> </router-view> -->
 
-        <!--     
-        <RouterView v-slot="{ Component }">
+        <router-view v-slot="{ Component }">
           <template v-if="Component">
-            <Suspense >
-             <template #default>
-              <Transition name="fade" mode="out-in">
-              <component :is="Component"></component>
-         
-            </Transition>
-            
-             </template>
+            <Suspense>
+              <template #default>
+                <component :is="Component"></component>
+              </template>
               <template #fallback>
-                <div>
-                 loading ....
-               
-                </div>
+                <div>loading ....</div>
               </template>
             </Suspense>
           </template>
-        </RouterView> -->
+        </router-view>
       </div>
     </div>
   </div>
@@ -65,10 +57,9 @@ body {
 .darkModee {
   background: #1a2b3e !important;
   box-shadow: 0 0 2px rgb(255, 255, 255);
-
 }
 
-.textColor{
+.textColor {
   color: #fff !important;
 }
 
