@@ -30,6 +30,7 @@ const routes = [
     component:Courses
 },
 
+
 {
     path:'/Login',
     name:'Login',
