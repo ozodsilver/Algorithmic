@@ -40,14 +40,15 @@ const routes = [
 {
     path:'/News',
     name:'News',
-    component:News,
-    children:[
-        {
-            path:'/profile/:id',
-            name:'UserProfile',
-            component:UserProfile
-        }
-    ]
+    component:News
+  
+   
+},
+{
+    path:'/profile/:id',
+    name:'profile',
+    component:UserProfile,
+    props:true 
 }
 
 ]

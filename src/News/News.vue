@@ -3,7 +3,7 @@
 
      
         <div  data-mdb-ripple-color="primary" class="card ripple" style="width: 18rem;" v-for="new2 in news1" :key="new2.id" id="heading">
-            <router-link :to="{name:'UserProfile', params:{id:new2.id}}">
+            <router-link :to="{name:'profile', params:{id:new2.id}}">
             <img :src="new2.img" class="card-img-top" alt="Sunset Over the Sea" />
             <div class="card-body">
                 <p class="card-text">{{ new2.title }}</p>
