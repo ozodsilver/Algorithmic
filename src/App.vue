@@ -58,12 +58,15 @@ body {
 
 .darkModee {
   background: #1a2b3e !important;
-  box-shadow: 0 0 2px rgb(255, 255, 255);
+  box-shadow: 0 0 1px rgb(135, 134, 134);
 }
 
-.textColor {
+
+
+.textColor{
   color: #fff !important;
 }
+
 
 .dark {
   background: #1a2b3e;

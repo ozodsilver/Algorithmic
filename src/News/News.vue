@@ -51,24 +51,6 @@ export default {
         onMounted(() => {
 
             gsap.from("[data-name = '2']", { opacity: 0, y: 500, duration: 0.6 });
-
-            //   gsap.from("#heading2", { opacity: 0, y: 280, duration: 0.5 });
-            //   gsap.from("#heading3", { opacity: 0, y: 380, duration: 0.8 });
-            //   gsap.from("#heading4", { opacity: 0, y: 480, duration: 1.1 });
-
-            //   gsap.from("#reja", { opacity: 0, duration: 0.2, scale: 0 });
-            //   gsap.to("#reja", { opacity: 1, duration: 0.4, scale: 1 });
-
-            //   // person1
-            //   gsap.from("#person1", { delay: 1, duration: 0.1, scale: 0 });
-            //   gsap.to("#person1", { delay: 1, duration: 0.1, scale: 1 });
-            //   // person2
-            //   gsap.from("#person2", { delay: 1.1, duration: 0.1, scale: 0 });
-            //   gsap.to("#person2", { delay: 1.1, duration: 0.1, scale: 1 });
-            //   // person3
-
-            //   gsap.from("#person3", { delay: 1.2, duration: 0.1, scale: 0 });
-            //   gsap.to("#person3", { delay: 1.2, duration: 0.1, scale: 1 });
         })
 
 

@@ -34,8 +34,6 @@ let store = useStore();
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
-
-
   margin-top: 70px;
   position: relative;
   z-index: 1111;
@@ -55,7 +53,6 @@ let store = useStore();
   height: 150%;
   right: -9%;
   position: absolute;
-
   background-repeat: no-repeat;
   background-position: 60%;
   background-size: contain;
