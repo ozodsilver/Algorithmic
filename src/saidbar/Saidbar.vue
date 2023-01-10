@@ -1,38 +1,26 @@
 <template>
   <div id="saidbar" class="side" :class="{ darkModee: store.color }">
     <div class="position-relative pt-3">
-      <router-link
-        to="/"
-        type="button"
-        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
-        :class="{textColor:store.showColor}"
-        id="but"
-        ><i class="fas fa-home fs-5"  :class="{textColor:store.showColor}"></i>Home
+      <router-link to="/" type="button" class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        :class="{ textColor: store.showColor }" id="but"><i class="fas fa-home fs-5"
+          :class="{ textColor: store.showColor }"></i>Home
       </router-link>
 
-      <router-link
-        to="/Users"
-        type="button"
-        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
-        :class="{textColor:store.showColor}"
-        ><i class="fas fa-users fs-5"  :class="{textColor:store.showColor}"></i>Foydalanuvchilar</router-link
-      >
+      <router-link to="/Users" type="button" class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
+        :class="{ textColor: store.showColor }"><i class="fas fa-users fs-5"
+          :class="{ textColor: store.showColor }"></i>Foydalanuvchilar</router-link>
 
-      <router-link
-        to="/Problems"
-        type="button"
-        :class="{textColor:store.showColor}"
-        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
-        ><i class="fab fa-asymmetrik fs-5"  :class="{textColor:store.showColor}"></i>Problems</router-link
-      >
+      <router-link to="/Problems" type="button" :class="{ textColor: store.showColor }"
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"><i class="fab fa-asymmetrik fs-5"
+          :class="{ textColor: store.showColor }"></i>Problems</router-link>
 
-      <router-link
-        :to="{ name: 'Courses' }"
-        type="button"
-        :class="{textColor:store.showColor}"
-        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"
-        ><i class="fas fa-photo-video fs-5"  :class="{textColor:store.showColor}"></i>Kurslar</router-link
-      >
+      <router-link :to="{ name: 'Courses' }" type="button" :class="{ textColor: store.showColor }"
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"><i class="fas fa-photo-video fs-5"
+          :class="{ textColor: store.showColor }"></i>Kurslar</router-link>
+
+          <router-link to="/News" type="button" :class="{ textColor: store.showColor }"
+        class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"><i class="fas fa-newspaper fs-5"
+          :class="{ textColor: store.showColor }"></i>Yangiliklar</router-link>
     </div>
   </div>
 </template>
@@ -46,16 +34,17 @@ let store = useStore();
   padding-top: 40%;
   padding: 7% 6%;
   padding-right: 0;
- 
+
 
   margin-top: 70px;
   position: relative;
   z-index: 1111;
 }
 
-.side{
+.side {
   background: #dfe8f4;
 }
+
 #but {
   position: relative;
 }
@@ -91,5 +80,6 @@ i {
   background-position: 102%;
   background-size: contain;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 </style>

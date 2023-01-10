@@ -3,6 +3,7 @@ import { ref, onErrorCaptured } from "vue";
 import Navigation from "./Navigation/Navigation.vue";
 import colorPickerVue from "./Navigation/colorPicker/colorPicker.vue";
 import Saidbar from "./saidbar/Saidbar.vue";
+
 let show = ref(true);
 let errMsg = ref(null);
 </script>
@@ -33,6 +34,7 @@ let errMsg = ref(null);
               </template>
               <template #fallback>
                 <div>loading ....</div>
+         
               </template>
             </Suspense>
           </template>
