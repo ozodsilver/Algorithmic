@@ -10,7 +10,10 @@ import {ref, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
 export default {
     setup () {
-        return {    
+        let router = useRoute()
+        let id = router
+        return { 
+            id   
         }
     }
 }
