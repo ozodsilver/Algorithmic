@@ -26,7 +26,7 @@
                   :class="{ textColor: store.showColor }"
                 >
                   <n-gradient-text :size="24" type="success" class="fw-bold">
-                    Algorithmic.uz
+                    Algorithmic.uz {{ store.showColor }}
                   </n-gradient-text>
                   - bu sizning dasturlash mahoratingizni oshirish, bilimingizni
                   kengaytirish va texnik suhbatlarga tayyorgarlik ko'rish uchun

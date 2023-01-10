@@ -5,18 +5,20 @@ import Users from '../src/Problems/Users.vue'
 import Courses from '../src/Problems/VideoCourses.vue'
 import Login from '../src/Problems/Login.vue'
 import News from '../src/News/News.vue'
-const routes = [
-{
-    path:'/',
-    name:'home',
-    component:Home
-},
+import UserProfile from '../src/News/UserProfile.vue'
 
-{
-    path:'/Problems',
-    name:'problems',
-    component:Problems
-},
+const routes = [
+  {
+    path: "/",
+    name: "home",
+    component: Home,
+  },
+
+  {
+    path: "/Problems",
+    name: "problems",
+    component: Problems,
+  },
 
 {
     path:'/Users',
@@ -30,7 +32,6 @@ const routes = [
     component:Courses
 },
 
-
 {
     path:'/Login',
     name:'Login',
@@ -39,17 +40,40 @@ const routes = [
 {
     path:'/News',
     name:'News',
-    component:News
+    component:News,
+    children:[
+        {
+            path:'/profile/:id',
+            name:'UserProfile',
+            component:UserProfile
+        }
+    ]
 }
 
 ]
 
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/News",
+    name: "News",
+    component: News,
+  },
+  {
+    path: "/profile/:id",
+    name: "profile",
+    component: UserProfile,
+    props: true,
+  },
+];
 
 const router = createRouter({
-    routes,
-    history: createWebHashHistory(),
-    history: createWebHistory(),
-})
-
+  routes,
+  history: createWebHashHistory(),
+  history: createWebHistory(),
+});
 
 export default router;

@@ -1,47 +1,55 @@
-<template >
-    <div>
-   <div class="row">
-    <div class="col-8  m-auto">
-    
-    <n-input-group>
-    
-      <n-input :style="{ width: '60%' }"  placeholder="Qidiruv" />
-      <n-button type="primary" round ghost>
-     
-      </n-button>
-    </n-input-group>
+<template>
+  <div>
+    <div class="row">
+      <div class="col-8 m-auto">
+        <n-input-group>
+          <n-input :style="{ width: '100%' }" placeholder="Qidiruv" />
+          <n-button type="primary" round style="width: 8%">
+            <i class="fas fa-search"></i>
+          </n-button>
+        </n-input-group>
+      </div>
     </div>
 
-   
-   </div>
-
-   <div class="row mt-4">
-    <div class="col-4  ">
-        <iframe style="width:100%; height:200px" src="https://www.youtube.com/embed/sY3_IY1GZ78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-3"></iframe>
+    <div class="row mt-4 ">
+      <div class="col-10 ">
+        <router-view></router-view>
+      </div>
+      <div class="col-2" style="height: 100vh;" >
+        <router-link
+          v-for="course in courses"
+          :key="course.id"
+          :to="{ name: 'coursLink', params: { id: course.id } }
+          "
+          data-mdb-ripple-color="light"
+          class="d-block text-center bg-success mt-2 rounded-3 text-white bg-gradient p-2 hover-overlay ripple"
+          >{{ course.title }}</router-link
+        >
+      </div>
     </div>
-    <div class="col-4  ">
-        <iframe style="width:100%; height:200px" src="https://www.youtube.com/embed/sY3_IY1GZ78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-3"></iframe>
-    </div>
-    <div class="col-4  ">
-        <iframe style="width:100%; height:200px" src="https://www.youtube.com/embed/sY3_IY1GZ78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-3"></iframe>
-    </div>
-    <div class="col-4 mt-4 ">
-        <iframe style="width:100%; height:200px" src="https://www.youtube.com/embed/sY3_IY1GZ78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-3"></iframe>
-    </div>
-   </div>
-    </div>
+  </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
+    let courses = [
+      {
+        id: 0,
+        title: "course1",
+      },
+      {
+        id: 1,
+        title: "course2",
+      },
+    ];
+
     return {
-      value: ref(null)
+      value: ref(null),
+      courses,
     };
-  }
+  },
 });
 </script>
-<style lang="scss" scoped>
-    
-</style>
+<style lang="scss" scoped></style>
