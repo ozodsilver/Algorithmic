@@ -25,7 +25,7 @@
 
                 <div class="p-5 pt-0 fw-bolder opacity-70 w-100 " :class="{'textColor':store.showColor}">
                   <n-gradient-text :size="24" type="success" class="fw-bold">
-                    Algorithmic.uz {{ store.showColor }}
+                    Algorithmic.uz 
                   </n-gradient-text>
                   - bu sizning dasturlash mahoratingizni oshirish, bilimingizni
                   kengaytirish va texnik suhbatlarga tayyorgarlik ko'rish uchun yordam
