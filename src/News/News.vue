@@ -1,12 +1,16 @@
 <template >
-    <div class=" row col-3 col-md-12 gap-3 m-auto ">
-        <div class="card " :data-name=new2.id style="width: 18rem;" v-for="new2 in news1" :key="new2.id" id="heading">
+    <div class=" row col-12 col-md-12 gap-5 m-auto ">
+
+     
+        <div  data-mdb-ripple-color="primary" class="card ripple" style="width: 18rem;" v-for="new2 in news1" :key="new2.id" id="heading">
+            <router-link :to="{name:'UserProfile', params:{id:new2.id}}">
             <img :src="new2.img" class="card-img-top" alt="Sunset Over the Sea" />
             <div class="card-body">
                 <p class="card-text">{{ new2.title }}</p>
-
             </div>
+        </router-link>
         </div>
+      
     </div>
 </template>
 <script>
@@ -49,26 +53,7 @@ export default {
             }
         ]
         onMounted(() => {
-
-            gsap.from("[data-name = '2']", { opacity: 0, y: 500, duration: 0.6 });
-
-            //   gsap.from("#heading2", { opacity: 0, y: 280, duration: 0.5 });
-            //   gsap.from("#heading3", { opacity: 0, y: 380, duration: 0.8 });
-            //   gsap.from("#heading4", { opacity: 0, y: 480, duration: 1.1 });
-
-            //   gsap.from("#reja", { opacity: 0, duration: 0.2, scale: 0 });
-            //   gsap.to("#reja", { opacity: 1, duration: 0.4, scale: 1 });
-
-            //   // person1
-            //   gsap.from("#person1", { delay: 1, duration: 0.1, scale: 0 });
-            //   gsap.to("#person1", { delay: 1, duration: 0.1, scale: 1 });
-            //   // person2
-            //   gsap.from("#person2", { delay: 1.1, duration: 0.1, scale: 0 });
-            //   gsap.to("#person2", { delay: 1.1, duration: 0.1, scale: 1 });
-            //   // person3
-
-            //   gsap.from("#person3", { delay: 1.2, duration: 0.1, scale: 0 });
-            //   gsap.to("#person3", { delay: 1.2, duration: 0.1, scale: 1 });
+            gsap.from("#heading", { opacity: 0, y: 300, duration: 0.6 });
         })
 
 

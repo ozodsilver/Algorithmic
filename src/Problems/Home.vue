@@ -193,7 +193,7 @@
             <img src="../assets/icons/2.png" alt="" style="width: 30px" id="medal2" />
           </div>
           <!-- person2 -->
-
+          
           <!-- person3 -->
           <div class="d-flex align-items-center mt-3 border-top pt-3 gap-4 w-75 m-auto">
             <div class="d-flex flex-column">

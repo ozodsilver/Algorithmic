@@ -5,6 +5,8 @@ import Users from '../src/Problems/Users.vue'
 import Courses from '../src/Problems/VideoCourses.vue'
 import Login from '../src/Problems/Login.vue'
 import News from '../src/News/News.vue'
+import UserProfile from '../src/News/UserProfile.vue'
+
 const routes = [
 {
     path:'/',
@@ -38,7 +40,14 @@ const routes = [
 {
     path:'/News',
     name:'News',
-    component:News
+    component:News,
+    children:[
+        {
+            path:'/profile/:id',
+            name:'UserProfile',
+            component:UserProfile
+        }
+    ]
 }
 
 ]

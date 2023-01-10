@@ -26,19 +26,9 @@ let errMsg = ref(null);
       <div class="mt-5 pt-5 px-4">
         <!-- <router-view> </router-view> -->
 
-        <router-view v-slot="{ Component }">
-          <template v-if="Component">
-            <Suspense>
-              <template #default>
-                <component :is="Component"></component>
-              </template>
-              <template #fallback>
-                <div>loading ....</div>
-         
-              </template>
-            </Suspense>
-          </template>
-        </router-view>
+      <router-view></router-view>
+
+      
       </div>
     </div>
   </div>
