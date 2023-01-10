@@ -10,6 +10,7 @@
             </div>
         </router-link>
         </div>
+        mana
       
     </div>
 </template>
