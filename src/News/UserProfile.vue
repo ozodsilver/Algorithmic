@@ -12,8 +12,9 @@ export default {
     setup () {
         let router = useRoute()
         let id = router
-     
-        return {router, id}
+        return { 
+            id   
+        }
     }
 }
 </script>
