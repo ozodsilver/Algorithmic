@@ -6,7 +6,7 @@ import Courses from '../src/Problems/VideoCourses.vue'
 import Login from '../src/Problems/Login.vue'
 import News from '../src/News/News.vue'
 import UserProfile from '../src/News/UserProfile.vue'
-
+import coursesLinks from '../src/Problems/nestedCourses/coursesLinks.vue'
 const routes = [
   {
     path: "/",
@@ -29,7 +29,16 @@ const routes = [
 {
     path:'/Courses',
     name:'Courses',
-    component:Courses
+    component:Courses,
+    props: true,
+    children:[
+        {
+            path: "/courses/:id",
+        name: "coursLink",
+        component: coursesLinks,
+        props: true,
+        }
+    ]
 },
 
 {
@@ -52,23 +61,6 @@ const routes = [
 
 ]
 
-  {
-    path: "/Login",
-    name: "Login",
-    component: Login,
-  },
-  {
-    path: "/News",
-    name: "News",
-    component: News,
-  },
-  {
-    path: "/profile/:id",
-    name: "profile",
-    component: UserProfile,
-    props: true,
-  },
-];
 
 const router = createRouter({
   routes,
