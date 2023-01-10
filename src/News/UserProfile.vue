@@ -1,7 +1,7 @@
 <template>
     <div>
 <h1>salom nested {{  id.params.id}}</h1>
-
+ 
     </div>
 </template>
 
