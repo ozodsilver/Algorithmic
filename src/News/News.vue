@@ -1,12 +1,19 @@
 <template >
     <div class=" row col-3 col-md-12 gap-3 m-auto ">
-        <div class="card " :data-name=new2.id style="width: 18rem;" v-for="new2 in news1" :key="new2.id" id="heading">
+     
+          <div class="card " :data-name=new2.id style="width: 18rem;" v-for="new2 in news1" :key="new2.id" id="heading">
+           <router-link :to="{name:'profile', params:{id:new2.id}}">
+          
             <img :src="new2.img" class="card-img-top" alt="Sunset Over the Sea" />
             <div class="card-body">
                 <p class="card-text">{{ new2.title }}</p>
 
             </div>
+             </router-link>
         </div>
+
+    
+     
     </div>
 </template>
 <script>

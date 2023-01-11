@@ -69,17 +69,19 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #164e63;
+  background: #fdffff;
+ 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(50, 51, 131);
+    border-radius: 20px;
 }
 
 /* Handle on hover */

@@ -6,7 +6,9 @@ import Courses from '../src/Problems/VideoCourses.vue'
 import Login from '../src/Problems/Login.vue'
 import News from '../src/News/News.vue'
 import UserProfile from '../src/News/UserProfile.vue'
+
 import coursesLinks from '../src/Problems/nestedCourses/coursesLinks.vue'
+import nestedLink from '../src/Problems/nestedCourses/nestedLink.vue'
 const routes = [
   {
     path: "/",
@@ -33,10 +35,18 @@ const routes = [
     props: true,
     children:[
         {
-            path: "/courses/:id",
+            path: "/Courses/:id",
         name: "coursLink",
         component: coursesLinks,
         props: true,
+        children:[
+          {
+            path:'/Courses/nestedLink/:id',
+            name:'nestedLink',
+            component:nestedLink,
+            props:true
+          }
+        ]
         }
     ]
 },
@@ -50,14 +60,14 @@ const routes = [
     path:'/News',
     name:'News',
     component:News,
-    children:[
-        {
-            path:'/profile/:id',
-            name:'UserProfile',
-            component:UserProfile
-        }
-    ]
-}
+},
+
+{
+  path:'/profile/:id',
+  name:'profile',
+  component:UserProfile,
+  props:true 
+},
 
 ]
 

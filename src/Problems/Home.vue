@@ -6,8 +6,7 @@
           content-style="padding: 0; color:#fff; border-radius:5px;"
           :hoverable="true"
           header-style="color:#fff"
-          data-mdb-ripple-color="secondary"
-          class="ripple h-100 dark border-0"
+          class="h-100 dark border-0"
           :class="{ darkMode: store.color }"
         >
           <n-tabs type="line" size="large" :tabs-padding="20">
@@ -53,9 +52,8 @@
         <n-card
           :hoverable="true"
           :bordered="false"
-          data-mdb-ripple-color="primary"
           id="heading2"
-          class="ripple h-100 dark"
+          class="h-100 dark"
           :class="{ darkMode: store.color }"
           content-style="padding: 0; color:white; border-radius:5px; height:100%"
         >
@@ -67,7 +65,6 @@
               to: 'rgb(170, 170, 170)',
             }"
             class="text-center d-block fw-bold p-3"
-            v-motion-roll-visible-top
             id="reja"
             :class="{ textColor: store.showColor }"
           >
@@ -101,8 +98,7 @@
           :hoverable="true"
           id="heading3"
           :bordered="false"
-          data-mdb-ripple-color="primary"
-          class="ripple dark"
+          class="dark"
           :class="{ darkMode: store.color }"
           content-style="padding: 0; color:white; border-radius:5px"
         >
@@ -114,7 +110,6 @@
               to: 'rgb(170, 170, 170)',
             }"
             class="text-center fw-bold d-block p-3"
-            v-motion-roll-visible-top
             :class="{ textColor: store.showColor }"
           >
             TOP-3
@@ -144,7 +139,6 @@
                   from: 'rgb(85, 85, 85)',
                   to: 'rgb(170, 170, 170)',
                 }"
-                v-motion-roll-visible-top
               >
                 <span class="breakWord" :class="{ textColor: store.showColor }">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -187,7 +181,7 @@
                 Samarqand vetirinariya Instituti
               </n-gradient-text>
               <div class="d-flex gap-3 align-item-center">
-                <i class="fas fa-trophy mt-1" style="color: orange" ></i>
+                <i class="fas fa-trophy mt-1" style="color: orange"></i>
                 <span class="text-secondary">1234</span>
               </div>
               <n-gradient-text
@@ -197,7 +191,6 @@
                   from: 'rgb(85, 85, 85)',
                   to: 'rgb(170, 170, 170)',
                 }"
-                v-motion-roll-visible-top
                 :class="{ textColor: store.showColor }"
               >
                 <span class="breakWord"
@@ -213,7 +206,10 @@
               id="person2"
             />
 
-            <i class="fas fa-caret-right fs-4 text-dark"  :class="{ textColor: store.showColor }"></i>
+            <i
+              class="fas fa-caret-right fs-4 text-dark"
+              :class="{ textColor: store.showColor }"
+            ></i>
             <img
               src="../assets/icons/2.png"
               alt=""
@@ -250,7 +246,6 @@
                   from: 'rgb(85, 85, 85)',
                   to: 'rgb(170, 170, 170)',
                 }"
-                v-motion-roll-visible-top
               >
                 <span class="breakWord" :class="{ textColor: store.showColor }">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -266,7 +261,10 @@
               id="person3"
             />
 
-            <i class="fas fa-caret-right fs-4 text-dark " :class="{ textColor: store.showColor }"></i>
+            <i
+              class="fas fa-caret-right fs-4 text-dark"
+              :class="{ textColor: store.showColor }"
+            ></i>
             <img
               src="../assets/icons/3.png"
               alt=""
@@ -283,8 +281,7 @@
           :hoverable="true"
           id="heading4"
           :bordered="false"
-          data-mdb-ripple-color="primary"
-          class="ripple h-100 dark"
+          class="h-100 dark"
           :class="{ darkMode: store.color }"
           content-style="padding: 0; color:white; border-radius:5px; height:100%"
         >
@@ -297,7 +294,6 @@
                 to: 'rgb(170, 170, 170)',
               }"
               class="text-center fw-bold d-block p-3"
-              v-motion-roll-visible-top
               :class="{ textColor: store.showColor }"
             >
               Statistika
@@ -370,37 +366,11 @@ export default {
     let loading = ref(true);
     let store = useStore();
 
-    setTimeout(() => {
-      loading.value = false;
-    }, 2000);
-
     onMounted(() => {
-      animate(
-        "#box",
-        { rotate: 360 },
-        { easing: spring() },
-        spring({ stiffness: 900 }),
-        {}
-      );
-
-      gsap.from("#heading", { opacity: 0, y: 500, duration: 0.6 });
-      gsap.from("#heading2", { opacity: 0, y: 280, duration: 0.5 });
-      gsap.from("#heading3", { opacity: 0, y: 380, duration: 0.8 });
-      gsap.from("#heading4", { opacity: 0, y: 480, duration: 1.1 });
-
-      gsap.from("#reja", { opacity: 0, duration: 0.2, scale: 0 });
-      gsap.to("#reja", { opacity: 1, duration: 0.4, scale: 1 });
-
-      // person1
-      gsap.from("#person1", { delay: 1, duration: 0.1, scale: 0 });
-      gsap.to("#person1", { delay: 1, duration: 0.1, scale: 1 });
-      // person2
-      gsap.from("#person2", { delay: 1.1, duration: 0.1, scale: 0 });
-      gsap.to("#person2", { delay: 1.1, duration: 0.1, scale: 1 });
-      // person3
-
-      gsap.from("#person3", { delay: 1.2, duration: 0.1, scale: 0 });
-      gsap.to("#person3", { delay: 1.2, duration: 0.1, scale: 1 });
+      gsap.from("#heading", { opacity: 0, y: 100, duration: 0.2 });
+        gsap.from("#heading1", { opacity: 0, y: 100, duration: 0.3 });
+          gsap.from("#heading2", { opacity: 0, y: 100, duration: 0.4 });
+           gsap.from("#heading3", { opacity: 0, y: 100, duration: 0.5 });
     });
 
     return { loading, store };

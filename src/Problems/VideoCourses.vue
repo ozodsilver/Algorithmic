@@ -21,8 +21,8 @@
           :key="course.id"
           :to="{ name: 'coursLink', params: { id: course.id } }
           "
-          data-mdb-ripple-color="light"
-          class="d-block text-center bg-success mt-2 rounded-3 text-white bg-gradient p-2 hover-overlay ripple"
+         
+          class="d-block text-center bg-success mt-2 rounded-3 text-white bg-gradient p-2 hover-overlay "
           >{{ course.title }}</router-link
         >
       </div>
