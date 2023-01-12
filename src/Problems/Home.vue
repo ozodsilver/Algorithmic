@@ -156,7 +156,7 @@
 
             <i class="fas fa-caret-right fs-4 text-dark"></i>
             <img
-              src="../assets/icons/1.png"
+             
               alt=""
               style="width: 30px"
               id="medal1"
@@ -210,12 +210,7 @@
               class="fas fa-caret-right fs-4 text-dark"
               :class="{ textColor: store.showColor }"
             ></i>
-            <img
-              src="../assets/icons/2.png"
-              alt=""
-              style="width: 30px"
-              id="medal2"
-            />
+           
           </div>
           <!-- person2 -->
 
@@ -265,12 +260,7 @@
               class="fas fa-caret-right fs-4 text-dark"
               :class="{ textColor: store.showColor }"
             ></i>
-            <img
-              src="../assets/icons/3.png"
-              alt=""
-              style="width: 30px"
-              id="medal3"
-            />
+            
           </div>
           <!-- person3 -->
         </n-card>
