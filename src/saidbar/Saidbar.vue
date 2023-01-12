@@ -14,7 +14,7 @@
         class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"><i class="fab fa-asymmetrik fs-5"
           :class="{ textColor: store.showColor }"></i>Problems</router-link>
 
-      <router-link :to="{ name: 'Courses' }" type="button" :class="{ textColor: store.showColor }"
+      <router-link to="/Courses" type="button" :class="{ textColor: store.showColor }"
         class="btn shadow-0 rounded-5 w-100 py-4 d-flex align-items-center gap-4"><i class="fas fa-photo-video fs-5"
           :class="{ textColor: store.showColor }"></i>Kurslar</router-link>
 

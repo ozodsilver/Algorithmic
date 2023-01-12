@@ -2,18 +2,18 @@
   <div>
   
     <h1>cousesLink id{{ route.params.id }}</h1>
+    <router-link :to="{name:'nestedLink'}">but</router-link>
   
-  <div v-for="user in users " :key="user.id">
-      <router-link  :to="{name:'nestedLink', params:{id:user.id}}">nestedLink</router-link>
-  </div>
+  
 
-    <div v-show="store.show">
+
+    <!-- <div v-show="store.show">
       <n-space>
         <n-spin size="medium" />
       </n-space>
-    </div>
+    </div> -->
 
-   <h1>salom</h1>
+
 
      <router-view></router-view>
   </div>
@@ -27,12 +27,12 @@ let route = useRoute();
 let store = useStore();
 let users = [
     {
-        id:11,
+        id:1,
         title:'nestedLinkl'
     },
 
      {
-        id:12,
+        id:2,
         title:'nestedLinkl2'
     }
 ]

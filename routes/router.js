@@ -32,23 +32,22 @@ const routes = [
     path:'/Courses',
     name:'Courses',
     component:Courses,
-    props: true,
-    children:[
-        {
-            path: "/Courses/:id",
-        name: "coursLink",
-        component: coursesLinks,
-        props: true,
-        children:[
-          {
-            path:'/Courses/nestedLink/:id',
-            name:'nestedLink',
-            component:nestedLink,
-            props:true
-          }
-        ]
-        }
-    ]
+   
+},
+
+{
+  path: '/Courses/:id',
+name: 'link',
+component: coursesLinks,
+props: true,
+children:[
+  {
+    path:'/Courses/:id',
+    name:'nestedLink',
+    component:nestedLink,
+    props:true
+  }
+]
 },
 
 {
